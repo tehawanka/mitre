@@ -1,21 +1,25 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
-export const useData = () => {
-  const [data, setData] = useState('')
-  const [loading, setLoading] = useState(true)
+const useData = (): { data: string, loading: boolean } => {
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    async function getData () {
-      const resp = await fetch(
-        'https://bartlomiejmendecki.gitlab.io/mitre/mitre.json'
-      )
+    async function getData (): Promise<void> {
+      const resp = await fetch('https://bartlomiejmendecki.gitlab.io/mitre/mitre.json');
       if (!resp.ok) {
-        throw new Error(`Error occured: ${resp.status}`)
+        throw new Error(`Error occured: ${resp.status}`);
       }
-      const result = await resp.json()
-      setData(result)
-      setLoading(false)
+      const result = await resp.json();
+      if (typeof result === Object) {
+        setData(result);
+      }
+      setLoading(false);
     }
-    getData()
-  }, [])
-  return { data, loading }
-}
+    getData();
+  }, []);
+
+  return { data, loading };
+};
+
+export default useData;
