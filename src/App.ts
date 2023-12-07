@@ -1,14 +1,14 @@
 
 import { useData } from './lib/useData';
-import Main from './components/Main/Main';
-import ContexProvider from './lib/Context';
+import Main from './components/Main/Main/Main';
+import { ContextProvider } from './lib/Context';
 
 function App() {
   const { data, loading } = useData();
   return (
-    <ContexProvider>
+    <ContextProvider>
       <Main data={data} isLoading={loading} />
-    </ContexProvider>
+    </ContextProvider>
   );
 }
 export default App;

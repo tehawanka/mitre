@@ -34,5 +34,5 @@
       "@static/*": ["../static/*"]
     }
   },
-  "include": ["src/**/*", "test", "const.ts"]
+  "include": ["src/**/*", "test/**/*", "declaration.d.ts"]
 }
