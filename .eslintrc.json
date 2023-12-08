@@ -3,6 +3,16 @@
         "browser": true,
         "es2021": true
     },
+    "globals": {
+        "ENUMS": true,
+        "SETTINGS": true,
+        "EnumType": true,
+        "Optional": true,
+        "JSX": true,
+        "React": true,
+        "google": true,
+        "dataLayer": true
+      },
     "extends": [
         "standard-with-typescript",
         "plugin:react/recommended"
@@ -17,6 +27,9 @@
     ],
     "rules": {
         "semi": ["error", "always"],
-        "@typescript-eslint/semi": ["error", "always"]
+        "@typescript-eslint/semi": ["error", "always"],
+        "quotes": "off",
+        "@typescript-eslint/quotes": "off",
+        "@typescript-eslint/consistent-type-definitions": "off",
     }
 }
