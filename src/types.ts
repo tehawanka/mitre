@@ -1,5 +1,3 @@
-import { type } from '@testing-library/user-event/dist/type';
-
 const AreaName = {
   TargetIntelligence: 'Target Intelligence',
   In: 'In',

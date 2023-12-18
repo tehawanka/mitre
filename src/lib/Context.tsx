@@ -23,5 +23,5 @@ export const ContextProvider = ({ children }) => {
 
      };
     const Provider = Context.Provider;
-    return <Provider value={value}>{children}</Provider>)
+    return <Provider value={value}>{children}</Provider>);
 }

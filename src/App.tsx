@@ -1,7 +1,5 @@
 import React from 'react';
 import { useData } from './lib/useData';
-import Main from './components/Main/Main/Main';
-import { ContextProvider } from './lib/Context';
 
 const App = (): JSX.Element => {
   const { data, loading } = useData();
