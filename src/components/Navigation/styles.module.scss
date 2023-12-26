@@ -1,0 +1,28 @@
+.wrapper {
+  background-color: #ededed;
+}
+
+.list {
+  margin-top: 10px;
+  display: flex;
+  overflow: auto;
+}
+
+.listItem {
+  color: #444444;
+  font-weight: bold;
+  margin: 0 65px;
+  user-select: 'none';
+  padding: 16px;
+  margin: 0 8px 0 0;
+  display: flex;
+  justify-content: space-around;
+  span {
+      margin: 0 15px;
+  }
+}
+
+.active {
+  color: #0062ff;
+  border-bottom: 2px solid #0062ff;
+}
