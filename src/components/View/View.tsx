@@ -2,6 +2,7 @@ import { Context } from '../../lib/Context';
 import { useContext } from 'react';
 import styles from './styles.module.scss';
 import type { Area, Tactic } from '@/types';
+import { Column } from '../Column/Column';
 
 export const View = ({ navigator }: { navigator: Area[] }) => {
   const { category } = useContext(Context);
@@ -17,8 +18,7 @@ export const View = ({ navigator }: { navigator: Area[] }) => {
             <h3>{item.name}</h3>
             <div className={styles.columns}>
               {data.map((tactic: Tactic) => {
-                return <div key={tactic.id}>{tactic.name}</div>;
-                // return <Column key={tactic.id} tactic={tactic} />;
+                return <Column key={tactic.id} tactic={tactic} />;
               })}
             </div>
           </div>

@@ -3,6 +3,7 @@ import styles from './styles.module.scss';
 import type { Data } from '@/lib/useData';
 import { Navigation } from '../../Navigation/Navigation';
 import { View } from '../../View/View';
+import { Search } from '../../Search/Search';
 
 type MainProps = {
   isLoading: boolean;
@@ -16,12 +17,9 @@ export const Main = ({ isLoading, data }: MainProps) => {
     </div>
   ) : (
     <div className={styles.wrapper}>
+      <Search />
       <Navigation categories={data.categories} />
       <View navigator={data.navigator} />
     </div>
   );
 };
-
-/* <Search />
-       <Navigation categories={data.categories} />
-       <View navigator={data.navigator} /> */
