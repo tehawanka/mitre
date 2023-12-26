@@ -10,7 +10,7 @@ import type {
 import styles from './styles.module.scss';
 import { Context } from '../../lib/Context';
 import { CheckBox, FilterList, OpenWith } from '../../lib/Icons/Icons';
-import type { Category } from '@js/types';
+import type { Category } from '@/types';
 
 const reorder = (list: Category[], startIndex: number, endIndex: number) => {
   const result = [...list];

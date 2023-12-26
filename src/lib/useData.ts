@@ -1,4 +1,4 @@
-import { type Area, type Category } from '@js/types';
+import { type Area, type Category } from '@/types';
 import { useEffect, useState } from 'react';
 
 export type Data = { categories: Category[]; navigator: Area[] };

@@ -29,7 +29,7 @@
     ],
     "paths": {
       "test-utils": ["test/test-utils"],
-      "@js/*": ["src/*"],
+      "@/*": ["./src/*"],
       "@test/*": ["test/*"],
       "@static/*": ["../static/*"]
     }
